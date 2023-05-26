@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct ValorantApp: App {
+    
+    @StateObject var settings:Settings = Settings()
+    
+    
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabNavigator()
+                .environmentObject(settings)
         }
     }
 }

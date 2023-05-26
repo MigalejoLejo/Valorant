@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "74EB927A-2CC5-4EC8-AC74-C801A1AC3576"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "124C8C0A-EB7F-4171-A60A-412475C6C5E3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App/Components/WeaponComponents/WeaponSkinItem.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "WeaponSkinItem"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "124C8C0A-EB7F-4171-A60A-412475C6C5E3 - 6c0aaa207fd9858"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Valorant.WeaponSkinItem.displayName.getter : Swift.String"
+                  moduleName = "Valorant"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/MigDev/SwiftApps/Tutorials/Valorant/App/Components/WeaponComponents/WeaponSkinItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "224">
+               </Location>
+               <Location
+                  uuid = "124C8C0A-EB7F-4171-A60A-412475C6C5E3 - d1957a0f6e4a84c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Valorant.WeaponSkinItem.displayName.setter : Swift.String"
+                  moduleName = "Valorant"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/MigDev/SwiftApps/Tutorials/Valorant/App/Components/WeaponComponents/WeaponSkinItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  uuid = "124C8C0A-EB7F-4171-A60A-412475C6C5E3 - 46c55ec61b0d4c5d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Valorant.WeaponSkinItem.displayName.modify : Swift.String"
+                  moduleName = "Valorant"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/MigDev/SwiftApps/Tutorials/Valorant/App/Components/WeaponComponents/WeaponSkinItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "248">
+               </Location>
+               <Location
+                  uuid = "124C8C0A-EB7F-4171-A60A-412475C6C5E3 - 29f925e77d14384c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Valorant.WeaponSkinItem.displayName.modify : Swift.String with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Valorant"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/MigDev/SwiftApps/Tutorials/Valorant/App/Components/WeaponComponents/WeaponSkinItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "124C8C0A-EB7F-4171-A60A-412475C6C5E3 - c26a42b0115fb094"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Valorant.WeaponSkinItem.$displayName.getter : SwiftUI.Binding&lt;Swift.String&gt;"
+                  moduleName = "Valorant"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/miguel/MigDev/SwiftApps/Tutorials/Valorant/App/Components/WeaponComponents/WeaponSkinItem.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "248">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C7F0CF54-6057-4150-AC9D-C5F367F9C6BB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App/Components/WeaponComponents/WeaponNameDisplay.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "previews"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
