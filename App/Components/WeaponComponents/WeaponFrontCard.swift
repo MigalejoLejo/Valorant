@@ -11,16 +11,13 @@ struct WeaponFrontCard: View {
     @Binding var weapon:Weapon
     @Binding var displayIcon:String
     @Binding var skinName:String
+    @Binding var cardColor: Color
+    
     
     
     var body: some View {
         
         ZStack{
-            //            Rectangle()
-            //                .fill(.white)
-            //                .frame(width: 350, height: 500)
-            //                .cornerRadius(20)
-            //                .shadow(color:.black.opacity(0.5), radius:10, x:10, y:10)
             Rectangle()
                 .fill(.white)
                 .cornerRadius(20)
@@ -29,25 +26,17 @@ struct WeaponFrontCard: View {
                 HStack{
                     HStack{}
                         .frame(width: 350, height: 100)
-                        .background(.pink)
-
-                    
+                        .background(cardColor).opacity(0.4)
                 }
             }
             
             VStack{
                 HStack{
-                  
                         WeaponNameDisplay(weapon: $weapon)
                             .padding(30)
                         Spacer()
-                    
-                   
                 }
-               
-
                 Spacer()
-                
             }
             
             VStack{
@@ -71,7 +60,7 @@ struct WeaponFrontCard: View {
                         }
                     }
                 }
-                .font(.system(size: 30, weight: .bold, design: .monospaced))
+                .font(.custom(ValorantDesign.mainFont, size: 45))
                 .foregroundColor(.green)
                 .colorMultiply(.gray)
                 .padding()
@@ -85,16 +74,18 @@ struct WeaponFrontCard: View {
                     HStack{}
                         .padding(.top, 300)
                     HStack{
-                        Text(skinName.isEmpty ? skinName : "test")
-                             .frame(width: 350, height: 50)
-                             .font(.title2)
+                        Text(skinName.isEmpty ? skinName : skinName)
+                             .font(.custom(ValorantDesign.mainFont, size: 17))
                              .bold()
                              .textCase(.uppercase)
-                             .foregroundColor(.purple)
-                        
-
-                        
+                             .foregroundColor(.white)
+                             .padding(.horizontal)
+                        Spacer()
                     }
+                    .frame(width: 350, height: 50)
+                    .background(skinName.isEmpty ? .clear : cardColor)
+
+
                     
                 }
                 
@@ -102,7 +93,12 @@ struct WeaponFrontCard: View {
             
         }
         .frame(width: 350, height: 500)
-        .shadow(radius: 10)
+        .background{
+            VStack{}
+                .frame(width: 350, height: 500)
+                .shadow(radius: 10)
+
+        }
         
     }
 }
@@ -111,8 +107,9 @@ struct WeaponFrontCard_Previews: PreviewProvider {
     @State static var weapon:Weapon = Dummy.dummyWeapon
     @State static var displayIcon:String = Dummy.dummyWeapon.displayIcon ?? ""
     @State static var skinName:String = Dummy.dummyWeapon.skins?[0].displayName ?? ""
+    @State static var cardColor: Color = Color.random()
     
     static var previews: some View {
-        WeaponFrontCard(weapon: $weapon, displayIcon: $displayIcon, skinName: $skinName)
+        WeaponFrontCard(weapon: $weapon, displayIcon: $displayIcon, skinName: $skinName, cardColor: $cardColor)
     }
 }

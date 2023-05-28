@@ -14,7 +14,7 @@ struct WeaponDescription: View {
     var body: some View {
         VStack{
             Text("Weapon Stats")
-                    .font(.title)
+                .font(.custom(ValorantDesign.mainFont, size: 35))
                     .bold()
                     .foregroundColor(.pink)
             VStack{
@@ -37,7 +37,7 @@ struct WeaponDescription: View {
                     Text(weapon.weaponStats?.reloadTimeSeconds?.description ?? "")
                 }
             }
-            .font(.title2)
+            .font(.custom(ValorantDesign.mainFont, size: 20))
 
             .padding(.top,1)
             .foregroundColor(.white)

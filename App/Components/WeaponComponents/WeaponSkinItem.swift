@@ -25,7 +25,7 @@ struct WeaponSkinItem: View {
                             .resizable()
                             .scaledToFit()
                     }
-                    .padding(.top, 5)
+                    .padding(.top, 15)
                     .padding(.leading, 40)
 
                 }
@@ -36,7 +36,7 @@ struct WeaponSkinItem: View {
                 Spacer()
                 HStack{
                     Text(skinName)
-                        .font(.system(size: 20, weight: .bold, design: .monospaced))
+                        .font(.custom(ValorantDesign.mainFont, size: 20))
                         .padding(10)
                         .foregroundColor(.pink)
                     Spacer()

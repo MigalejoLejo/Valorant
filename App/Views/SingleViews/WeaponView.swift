@@ -12,6 +12,7 @@ struct WeaponView: View {
     @Binding var weapon:Weapon
     @State var displayIcon:String = ""
     @State var skinName:String = ""
+    @Binding var cardColor: Color
 
     
     @Binding var isHidden:Bool
@@ -22,7 +23,7 @@ struct WeaponView: View {
             
             ZStack{
                 if !isFlipped {
-                    WeaponFrontCard(weapon: $weapon, displayIcon: $displayIcon, skinName: $skinName)
+                    WeaponFrontCard(weapon: $weapon, displayIcon: $displayIcon, skinName: $skinName, cardColor: $cardColor)
                 } else {
                     WeaponBackCard(weapon: $weapon)
                         .rotation3DEffect(Angle(degrees:self.isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
@@ -50,18 +51,11 @@ struct WeaponView: View {
                             }
                         
                     }
-                }
+                } .padding()
+                    .padding(.top, 50)
             }
-            
-            
+           
         }
-        .background(
-            Image("camouflage")
-                .resizable()
-                .rotationEffect(.degrees(90))
-                .scaledToFill()
-                .blur(radius: 10))
-        
     }
 }
 
@@ -69,10 +63,11 @@ struct WeaponView: View {
 struct WeaponView_Previews: PreviewProvider {
     
     @State static var weapon:Weapon = Dummy.dummyWeapon
+    @State static var cardColor: Color = Color.random()
     
     static var previews: some View {
         @State var testBool:Bool = false
-        WeaponView(weapon: $weapon, isHidden: $testBool)
+        WeaponView(weapon: $weapon, cardColor: $cardColor, isHidden: $testBool)
         
     }
 }

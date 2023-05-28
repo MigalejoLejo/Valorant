@@ -13,16 +13,15 @@ struct WeaponNameDisplay: View {
     var body: some View {
         VStack (alignment: .center){
             Text(weapon.shopData?.category ?? "")
-//                .font(.system(size: 20, weight: .bold, design:))
-                .font(.custom("RussoOne-Regular", size: 20))
-                .foregroundColor(.green)
-                .colorMultiply(.gray.opacity(0.8))
+                .font(.custom(ValorantDesign.mainFont, size: 20))
+//                .foregroundColor(.green)
+//                .colorMultiply(.gray.opacity(0.8))
                 .padding(.bottom, 0)
             Text(weapon.displayName)
-                .font(.custom("RussoOne-Regular", size: 50))
+                .font(.custom(ValorantDesign.mainFont, size: 50))
                 .font(.system(size: 50, weight: .bold, design: .default))
-                .foregroundColor(.green)
-                .colorMultiply(.gray)
+//                .foregroundColor(.pink)
+//                .colorMultiply(.gray)
         }
     }
 }

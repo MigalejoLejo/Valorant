@@ -14,9 +14,8 @@ struct WeaponBackCard: View {
     var body: some View {
         ZStack{
             Rectangle()
-                .fill(.green)
-                .colorMultiply(.gray.opacity(0.8))
-                .frame(width: 350, height: 400)
+                .colorMultiply(.gray.opacity(0.7))
+                .frame(width: 350, height: 500)
                 .cornerRadius(20)
                 .shadow(color:.black.opacity(0.5), radius:10, x:10, y:10)
             VStack{

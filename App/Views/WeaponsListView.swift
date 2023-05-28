@@ -23,26 +23,21 @@ struct WeaponsListView: View {
             ScrollView{
                 HStack{
                     Text(LangTools.get(language: settings.language).Weapons)
-                        .font(.largeTitle)
+                        .font(.custom(ValorantDesign.mainFont, size: 40))
                         .bold()
-                        .foregroundColor(.white)
                     Spacer()
                     ContentFlag(language: $settings.language)
                 }
                 .padding(.horizontal,30)
                 ForEach($weapons, id: \.uuid) { weapon in
-                    NavigationLink(destination: WeaponView(weapon: weapon, isHidden: $isHidden )){
-                        WeaponListCard(weapon: weapon)
+                    @State var cardColor = Color.random()
+                    NavigationLink(destination: WeaponView(weapon: weapon, cardColor: $cardColor, isHidden: $isHidden )){
+                        WeaponListCard(weapon: weapon, cardColor: $cardColor)
                     }
+                    .padding(.vertical,5)
+
                 }
             }
-            .background(
-                Image("camouflage")
-                    .resizable()
-                    .rotationEffect(.degrees(90))
-                    .scaledToFill()
-                    .blur(radius: 10))
-            
             .onAppear{
                 if weapons.isEmpty{
                     callWeapons()
