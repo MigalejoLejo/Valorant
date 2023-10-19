@@ -14,19 +14,23 @@ struct AgentView: View {
     
     var body: some View {
         ScrollView {
-            
-            // Agent name
+            VStack{
+                
+                
+                // Agent name
                 AgentNameDisplay(agent: $agent)
-                .padding()
+                    .padding()
                 
-    
-            // Portrait Picture
+                
+                // Portrait Picture
                 AgentProfilePicture(agent: $agent)
-            
-            
-            // Description
-                AgentDescription(agent: $agent)
                 
+                
+                // Description
+                AgentDescription(agent: $agent)
+                    .padding(.top, 10)
+               
+            }
         }
         .onAppear{
             isHidden = true
@@ -41,5 +45,6 @@ struct AgentView_Previews: PreviewProvider {
 
     static var previews: some View {
         AgentView(agent: $testAgent, isHidden: $testBool)
+            .environmentObject(AgentsService())
     }
 }

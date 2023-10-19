@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  Valorant
+
+  Created by Miguel Alejandro Correa Avila on 31/5/23.
+  
+*/
+"url_language" = "";
+"agents_title" = "Agents";
+"weapons_title" = "Weapons";
+"settings_title" = "Configuration";
+"description_title" = "Description";
+"flag_icon" = "🇬🇧";
+"show_favorites_only" = "Show favorites only";
+"show_skins" = "Show Skins";
+
+
+// WEAPON STATS
+"weapon_stats" = "Weapon Stats";
+"fire_rate" = "Fire rate";
+"magazin_size" = "Magazin size";
+"equip_time" = "Equip time (in secs)";
+"reload_time" = "Reload time (in secs)";
+"tap_to_show_stats" = "Tap to show stats";
+
+// WEAPON SHOP
+"no_price_available" = "no price available";
+"selected_skin" = "Selected skin";

@@ -10,14 +10,12 @@ import SwiftUI
 @main
 struct ValorantApp: App {
     
-    @StateObject var settings:Settings = Settings()
-    
-    
+    @StateObject var agentService:AgentsService = AgentsService()
     
     var body: some Scene {
         WindowGroup {
             TabNavigator()
-                .environmentObject(settings)
+                .environmentObject(agentService)
         }
     }
 }

@@ -7,13 +7,17 @@
 
 import SwiftUI
 
-struct WeaponSkinItem: View {
+struct SkinItem: View {
     var skinName: String
     var skinIcon: String
+    var valorantFont: String = VFonts.Valorant.rawValue
+
 
     
     var body: some View {
-       
+        
+        
+        
         ZStack{
             VStack{
                 HStack{
@@ -21,33 +25,27 @@ struct WeaponSkinItem: View {
                         image.resizable().scaledToFit()
                         
                     } placeholder: {
-                        Image(systemName: "questionmark.square.dashed")
+                        Image(systemName: "questionmark.square")
                             .resizable()
-                            .scaledToFit()
+                            .frame(width: 20, height: 20)
                     }
-                    .padding(.top, 15)
-                    .padding(.leading, 40)
-
                 }
-                Spacer()
-            }
-           
-            VStack{
-                Spacer()
                 HStack{
                     Text(skinName)
-                        .font(.custom(ValorantDesign.mainFont, size: 20))
-                        .padding(10)
-                        .foregroundColor(.pink)
+                        .font(.custom(valorantFont, size: 15))
+                        .frame(height: 20)
+
                     Spacer()
+
                 }
             }
-
+            .frame(maxWidth: .infinity)
+            
         }
-        .frame(width: 230, height: 90)
+        .padding(10)
         .background(.white)
-            .cornerRadius(20)
-            .shadow(radius: 10)
+        .cornerRadius(10)
+        
     }
 }
 
@@ -58,6 +56,14 @@ struct WeaponSkinItem_Previews: PreviewProvider {
    
     static var previews: some View {
 
-        WeaponSkinItem(skinName: skinName, skinIcon: skinIcon)
+        SkinItem(skinName: skinName, skinIcon: skinIcon)
+    }
+}
+
+
+struct TabNavigator2_Previews: PreviewProvider {
+    static var previews: some View {
+        TabNavigator()
+            .environmentObject(AgentsService())
     }
 }

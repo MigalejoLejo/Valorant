@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct AgentNameDisplay: View {
+    let valorantFont: String = VFonts.Valorant.rawValue
+
     @Binding var agent:Agent
     var body: some View {
        
             VStack (alignment: .center){
                 Text("Agent")
-                    .font(.system(size: 20, weight: .bold, design: .monospaced))
+                    .font(.custom(valorantFont, size: 20))
                     .padding(.bottom, 0)
                 Text(agent.displayName)
-                    .font(.system(size: 50, weight: .bold, design: .default))
+                    .font(.custom(valorantFont, size: 40))
                     .foregroundColor(agent.getColor(at: 0))
             }
         

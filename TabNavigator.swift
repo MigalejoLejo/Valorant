@@ -8,37 +8,32 @@
 import SwiftUI
 
 struct TabNavigator: View {
-    @EnvironmentObject var settings: Settings
+    
+    init() {
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.init(name: VFonts.Valorant.rawValue, size: 15)! ], for: .normal)
+    }
     
     var body: some View {
         TabView {
             AgentsListView()
                 .tabItem {
-                    Label(LangTools.get(language: settings.language).Agents, systemImage: "person.3")
+                    Label(LocalizedStringKey("agents_title"), systemImage: "person.3")
+                        .font(Font.custom(VFonts.Valorant.rawValue, size: 50))
                 }
+                
             
             WeaponsListView()
                 .tabItem {
-                    Label(LangTools.get(language: settings.language).Weapons, systemImage: "gamecontroller")
+                    Label(LocalizedStringKey("weapons_title"), systemImage: "gamecontroller")
                 }
-            
-            SettingsView()
-                .tabItem {
-                    Label(LangTools.get(language: settings.language).Settings, systemImage: "gearshape")
-                }
-            
-        
         }
-        
+        .foregroundColor(.pink)
     }
 }
 
 struct TabNavigator_Previews: PreviewProvider {
-
-    var settings:Settings = Settings()
-    
     static var previews: some View {
         TabNavigator()
-            .environmentObject(Settings())
+            .environmentObject(AgentsService())
     }
 }

@@ -10,6 +10,10 @@ import SwiftUI
 struct AgentListCard: View {
     
     @Binding var agent:Agent
+    @EnvironmentObject var agentsService: AgentsService
+    
+    var valorantFont: String = VFonts.Valorant.rawValue
+
     
     var body: some View {
         ZStack{
@@ -22,7 +26,7 @@ struct AgentListCard: View {
                     
                     Text(agent.displayName)
                         .foregroundColor(.white)
-                        .font(.title)
+                        .font(.custom(valorantFont, size: 25))
                         .cornerRadius(5)
                         .bold()
                 }
@@ -35,9 +39,21 @@ struct AgentListCard: View {
                     .frame(width: 350, height: 150)
                     .background(agent.getColor(at: 0).opacity(0.3))
             )                .shadow(color:.black.opacity(0.5), radius:10, x:10, y:10)
-
             .frame(width: 350, height: 150)
             
+            VStack{
+                Spacer()
+
+                HStack{
+                    Spacer()
+                    Image(systemName: agentsService.isFavoriteAgent(id: agent.uuid) ? "star.fill" : "star")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(agentsService.isFavoriteAgent(id: agent.uuid) ? .yellow : .clear)
+                }
+            }
+            .padding(10)
+
         }
 
         .frame(width: 350, height: 150)
@@ -52,5 +68,6 @@ struct AgentListCard_Previews: PreviewProvider {
     
     static var previews: some View {
         AgentListCard(agent:$agent)
+            .environmentObject(AgentsService())
     }
 }

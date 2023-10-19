@@ -34,8 +34,7 @@ struct Agent:Codable{
         }
         return color
     }
-    
-    
 }
+
 
 

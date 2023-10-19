@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  Valorant
+
+  Created by Miguel Alejandro Correa Avila on 31/5/23.
+  
+*/
+"url_language" = "es-ES";
+"agents_title" = "Agentes";
+"weapons_title" = "Armas";
+"settings_title" = "Configuración";
+"description_title" = "Descripción";
+"flag_icon" = "🇪🇸";
+"show_favorites_only" = "Solo favoritos";
+"show_skins" = "Mostrar Skins";
+
+
+// WEAPON STATS
+"weapon_stats" = "Estadísticas del Arma";
+"fire_rate" = "Velocidad de disparo";
+"magazin_size" = "Tamaño de cartucho";
+"equip_time" = "Tiempo de equipamiento (en seg.)";
+"reload_time" = "tiempo de recarga (en seg)";
+"tap_to_show_stats" = "Tap um Stats anzuzeigen";
+
+
+//WEAPON SHOP
+"no_price_available" = "no hay precio disponible";
+"selected_skin" = "Skin seleccionado";
+

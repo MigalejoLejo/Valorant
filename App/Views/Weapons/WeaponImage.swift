@@ -18,8 +18,11 @@ struct WeaponImage: View {
         } placeholder: {
             Image(systemName: "questionmark.app")
                 .resizable()
-                .scaleEffect(0.5)
+                .scaledToFit()
+                .padding(250)
+                
         }
+        .frame(maxWidth: .infinity)
 
     }
 }

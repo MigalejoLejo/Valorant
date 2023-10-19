@@ -10,11 +10,13 @@ import SwiftUI
 struct AgentDescription: View {
     @Binding var agent:Agent
     
+    let valorantFont: String = VFonts.Valorant.rawValue
+    
     var body: some View {
         VStack{
             HStack{
                 Text("Information")
-                    .font(.system(size: 40, weight: .bold, design: .default))
+                    .font(.custom(valorantFont, size: 40))
                     .foregroundColor(agent.getColor(at: 0))
                 Spacer()
             }
@@ -22,8 +24,9 @@ struct AgentDescription: View {
             
            
                 Text(agent.description)
-                    .font(.system(size: 20, weight: .light, design: .default))
-            
+                .font(.custom(VFonts.Russo.rawValue, size: 22))
+                .foregroundColor(.black.opacity(0.8))
+
         }.padding()
     }
 }

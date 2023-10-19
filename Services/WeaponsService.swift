@@ -10,13 +10,18 @@ import Foundation
 
 class WeaponsService {
     
-    func getWeapons(completion: @escaping (Result<WeaponsData, Error>) -> Void, language:Language) {
-        var requestURL = "https://valorant-api.com/v1/weapons?"
+    func getWeapons(completion: @escaping (Result<WeaponsData, Error>) -> Void) {
+        let userLanguage = Locale.current.language.languageCode?.identifier ?? "en"
+        var urlLang: String
         
-        switch language {
-        case .English: requestURL += ""
-        case .Spanish: requestURL += "language="+Language.Spanish.rawValue
+        switch userLanguage {
+        case "en":urlLang = "en-US"
+        case "es":urlLang = "es-ES"
+        case "de":urlLang = "de-DE"
+        default: urlLang = "en-US"
         }
+        
+        let requestURL = "https://valorant-api.com/v1/weapons?language="+urlLang
         
         guard let url = URL (string: requestURL) else {
             return

@@ -44,7 +44,23 @@ struct Dummy {
         skins: [
             Skin(
                 uuid: "String",
-                displayName: "dadef",
+                displayName: "dfg",
+                displayIcon:  "https://media.valorant-api.com/weaponskins/89be9866-4807-6235-2a95-499cd23828df/displayicon.png"),
+            Skin(
+                uuid: "String",
+                displayName: "dad<asefef",
+                displayIcon:  "https://media.valorant-api.com/weaponskins/89be9866-4807-6235-2a95-499cd23828df/displayicon.png"),
+            Skin(
+                uuid: "String",
+                displayName: "dadtjref",
+                displayIcon:  "https://media.valorant-api.com/weaponskins/89be9866-4807-6235-2a95-499cd23828df/displayicon.png"),
+            Skin(
+                uuid: "String",
+                displayName: "dadytjef",
+                displayIcon:  "https://media.valorant-api.com/weaponskins/89be9866-4807-6235-2a95-499cd23828df/displayicon.png"),
+            Skin(
+                uuid: "String",
+                displayName: "dae5ydef",
                 displayIcon:  "https://media.valorant-api.com/weaponskins/89be9866-4807-6235-2a95-499cd23828df/displayicon.png")
         ]
         

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AgentProfilePicture: View {
     @Binding var agent:Agent
+    @EnvironmentObject var agentsService: AgentsService
+    
     var body: some View {
         VStack{
             
@@ -32,6 +34,24 @@ struct AgentProfilePicture: View {
                 }
                 .scaledToFit()
             
+                VStack{
+                    HStack{
+                        Spacer()
+                        Image(systemName: agentsService.isFavoriteAgent(id: agent.uuid) ?  "star.fill" : "star")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .foregroundColor(agentsService.isFavoriteAgent(id: agent.uuid) ? .yellow : .gray)
+                    }
+                    Spacer()
+                }
+                .frame(width: 300, height: 550)
+                .onTapGesture {
+                    if agentsService.isFavoriteAgent(id: agent.uuid){
+                        agentsService.removeFavoriteAgent(by: agent.uuid)
+                    } else {
+                        agentsService.addFavoriteAgent(by: agent.uuid)
+                    }
+                }
                 
                 
                 
@@ -46,5 +66,6 @@ struct AgentProfilePicture_Previews: PreviewProvider {
     @State static var agent:Agent = Dummy.dummyAgent
     static var previews: some View {
         AgentProfilePicture(agent: $agent)
+            .environmentObject(AgentsService())
     }
 }
